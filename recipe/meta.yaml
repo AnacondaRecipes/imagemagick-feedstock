@@ -22,7 +22,7 @@ requirements:
     - make
     - gnuconfig
     - {{ compiler('c') }}
-    - {{ stdlib("c") }}
+    #- {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - pkg-config
   host:
@@ -94,6 +94,11 @@ about:
   summary: Software suite to create, edit, compose, or convert bitmap images.
 
 extra:
+  anaconda-services:
+    ref: https://anaconda.zendesk.com/agent/tickets/78379
+    reason: Dependency for pdfplumber
+  recipe-maintainers:
+    - ianaobi
   recipe-maintainers:
     - ocefpaf
     - halldc
