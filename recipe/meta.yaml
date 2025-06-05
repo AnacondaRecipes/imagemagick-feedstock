@@ -39,7 +39,7 @@ requirements:
     - jpeg
     - libheif
     - libjpeg-turbo
-    - libjpeg
+    #- libjpeg
     - libpng
     - librsvg
     - libtiff
