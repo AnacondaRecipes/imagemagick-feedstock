@@ -38,10 +38,11 @@ requirements:
     - jbig
     - libheif
     - libjpeg-turbo
+    - libjpeg
     - libpng
     - librsvg
     - libtiff
-    - libwebp
+    #- libwebp
     - libxml2
     - openjpeg
     - pango
