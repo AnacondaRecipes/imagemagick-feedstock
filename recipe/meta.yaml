@@ -54,6 +54,13 @@ requirements:
     - liblzma-devel
     - zlib
     - glib
+
+    - harfbuzz
+    - gdk-pixbuf
+    - cairo
+    - xorg-libsm
+    - xorg-libice
+
   run:
     - bzip2
     - fftw
@@ -80,6 +87,11 @@ requirements:
     - liblzma-devel
     - zlib
 
+    - harfbuzz
+    - gdk-pixbuf
+    - cairo
+    - xorg-libsm
+    - xorg-libice
 test:
   commands:
     - magick --version
