@@ -22,7 +22,7 @@ requirements:
     - make
     - gnuconfig
     - {{ compiler('c') }}
-    - {{ stdlib("c") }}
+    #- {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - pkg-config
   host:
@@ -36,8 +36,10 @@ requirements:
     - giflib
     - graphviz
     - jbig
+    - jpeg
     - libheif
-    - libjpeg-turbo
+    #- libjpeg-turbo
+    #- libjpeg
     - libpng
     - librsvg
     - libtiff
@@ -52,6 +54,13 @@ requirements:
     - liblzma-devel
     - zlib
     - glib
+
+    - harfbuzz
+    - gdk-pixbuf
+    - cairo
+    - xorg-libsm
+    - xorg-libice
+
   run:
     - bzip2
     - fftw
@@ -78,6 +87,11 @@ requirements:
     - liblzma-devel
     - zlib
 
+    - harfbuzz
+    - gdk-pixbuf
+    - cairo
+    - xorg-libsm
+    - xorg-libice
 test:
   commands:
     - magick --version
@@ -94,6 +108,12 @@ about:
   summary: Software suite to create, edit, compose, or convert bitmap images.
 
 extra:
+  anaconda-services:
+    ref: https://anaconda.zendesk.com/agent/tickets/78379
+    reason: Dependency for pdfplumber
+  recipe-maintainers:
+    - ianaobi
+    - bkreider
   recipe-maintainers:
     - ocefpaf
     - halldc
